@@ -1,0 +1,17 @@
+{
+  "name": "@dawangraoming/nextjs-monorepo-template",
+  "description": "A monorepo that uses Next.js, TypeScript, Jest and Storybook",
+  "version": "1.0.0",
+  "author": "dawangraoming",
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "turbo": "^1.2.9"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel --no-cache",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "license": "MIT"
+}

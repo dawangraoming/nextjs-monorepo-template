@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
+}

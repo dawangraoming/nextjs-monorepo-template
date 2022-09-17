@@ -1,0 +1,7 @@
+{
+  "extends": "@dawangraoming/config/tsconfig.lib.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*.ts"]
+}
