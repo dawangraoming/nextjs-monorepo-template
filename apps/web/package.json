@@ -9,9 +9,11 @@
     "typecheck": "tsc",
     "lint": "eslint src",
     "test": "jest",
+    "tsc": "tsc",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
+    "@dawangraoming/config": "workspace:^1.0.0",
     "@dawangraoming/uikit": "workspace:^1.0.0",
     "@headlessui/react": "^1.6.1",
     "@heroicons/react": "^1.0.6",

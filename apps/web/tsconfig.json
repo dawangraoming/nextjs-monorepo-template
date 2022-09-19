@@ -1,11 +1,8 @@
 {
+  "extends": "@dawangraoming/config/tsconfig.base.json",
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "types": ["node", "jest", "@testing-library/jest-dom"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -21,13 +18,6 @@
     "baseUrl": "./src",
     "incremental": true
   },
-  "exclude": [
-    "../../node_modules"
-  ],
-  "include": [
-    "./jest.setup.ts",
-    "web/next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["../../node_modules"],
+  "include": ["./jest.setup.ts", "web/next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

@@ -21,6 +21,9 @@
     },
     "lint": {
       "cache": true
+    },
+    "tsc": {
+      "cache": true
     }
   }
 }
