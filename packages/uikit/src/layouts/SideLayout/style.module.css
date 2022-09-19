@@ -1,0 +1,18 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.header,
+.footer {
+  min-height: 100px;
+  width: 100%;
+  background: gray;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+}

@@ -1,2 +1,2 @@
-export { Button } from './button';
-export { Avatar } from './avatar';
+export * from './layouts';
+export * from './components';
