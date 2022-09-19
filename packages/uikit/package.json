@@ -8,7 +8,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "unbuild",
-    "lint": "eslint ./src/**/* --fix",
+    "lint": "eslint src --fix",
     "tsc": "tsc",
     "storybook": "STORYBOOK=1 start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",

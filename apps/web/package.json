@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",
-    "lint": "lint",
+    "lint": "eslint src",
     "test": "jest",
     "analyze": "ANALYZE=true next build"
   },

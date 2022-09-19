@@ -8,7 +8,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "unbuild",
-    "lint": "eslint ./src/**/* --fix",
+    "lint": "eslint src",
     "test": "jest",
     "tsc": "tsc",
     "preinstall": "npx only-allow pnpm"
