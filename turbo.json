@@ -7,14 +7,14 @@
       "outputs": [".next/**"]
     },
     "test": {
-      "cache": true,
-      "dependsOn": ["^build"]
+      "cache": true
     },
     "typecheck": {
       "dependsOn": ["^build"]
     },
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
     },
     "start": {
       "dependsOn": ["^build"]

@@ -1,7 +1,8 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "sourceMap": true
+    "sourceMap": true,
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo"
   },
   "exclude": [
     "node_modules",
