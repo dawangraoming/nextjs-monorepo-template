@@ -1,6 +1,6 @@
 # nextjs-monorepo-template
 
-A monorepo includes Turbo, PNPM, Next.js, TypeScript, Jest, ESLint, Storybook.
+A monorepo includes Turbo, PNPM, Next.js, TypeScript, Jest, ESLint, Storybook, Husky.
 
 ## It uses
 
@@ -11,6 +11,7 @@ A monorepo includes Turbo, PNPM, Next.js, TypeScript, Jest, ESLint, Storybook.
 - Jest
 - ESLint
 - Storybook
+- Husky
 
 ## Getting started
 

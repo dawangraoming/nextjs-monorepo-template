@@ -57,3 +57,26 @@ declare module '*.bmp' {
 
   export default content;
 }
+
+interface ImageProps
+  extends Omit<
+    JSX.IntrinsicElements['img'],
+    'src' | 'srcSet' | 'ref' | 'width' | 'height' | 'loading'
+  > {
+  src: string | StaticImport;
+  width?: number | string;
+  height?: number | string;
+  layout?: LayoutValue;
+  loader?: ImageLoader;
+  quality?: number | string;
+  priority?: boolean;
+  loading?: LoadingValue;
+  lazyRoot?: React.RefObject<HTMLElement> | null;
+  lazyBoundary?: string;
+  placeholder?: PlaceholderValue;
+  blurDataURL?: string;
+  unoptimized?: boolean;
+  objectFit?: ImgElementStyle['objectFit'];
+  objectPosition?: ImgElementStyle['objectPosition'];
+  onLoadingComplete?: OnLoadingComplete;
+}
