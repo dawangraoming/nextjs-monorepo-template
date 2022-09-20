@@ -1,12 +1,40 @@
 import { FC, PropsWithChildren } from 'react';
-import s from './style.module.css';
+import styled, { css } from 'styled-components';
 
-export const SideLayout: FC<PropsWithChildren<null>> = ({ children }) => {
+const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+`;
+
+const CssSide = css`
+  min-height: 100px;
+  width: 100%;
+  background: gray;
+`;
+
+const Header = styled.header`
+  ${CssSide}
+`;
+
+const Footer = styled.footer`
+  ${CssSide}
+`;
+
+const Main = styled.main`
+  flex: 1;
+  width: 100%;
+`;
+
+export const SideLayout: FC<PropsWithChildren<Record<never, never>>> = ({
+  children,
+}) => {
   return (
-    <div className={s.layout}>
-      <header className={s.header} />
-      <main className={s.main}>{children}</main>
-      <footer className={s.footer}></footer>
-    </div>
+    <Layout>
+      <Header />
+      <Main>{children}</Main>
+      <Footer />
+    </Layout>
   );
 };

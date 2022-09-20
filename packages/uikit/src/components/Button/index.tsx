@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.css';
+import styled from 'styled-components';
 
 interface ButtonProps {
   /**
@@ -24,6 +24,30 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
+const StyledButton = styled.button<Pick<ButtonProps, 'size' | 'primary'>>`
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+
+  color: ${(props) => (props.primary ? 'white' : '#333')};
+  background-color: ${(props) => (props.primary ? '#1ea7fd' : 'transparent')};
+  box-shadow: ${(props) =>
+    props.primary ? 'none' : 'rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset'};
+
+  font-size: ${(props) =>
+    props.size === 'small' ? '12px' : props.size === 'large' ? '18px' : '14px'};
+  padding: ${(props) =>
+    props.size === 'small'
+      ? '10px 16px'
+      : props.size === 'large'
+      ? '22px 30px'
+      : '14px 20px'};
+`;
+
 /**
  * Primary UI component for user interaction
  */
@@ -34,19 +58,15 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
   return (
-    <button
+    <StyledButton
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
-        ' ',
-      )}
+      primary={primary}
+      size={size}
       style={{ backgroundColor }}
       {...props}
     >
       {label}
-    </button>
+    </StyledButton>
   );
 };
