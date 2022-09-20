@@ -1,12 +1,11 @@
 {
   "extends": [
     "eslint:recommended",
+    "plugin:prettier/recommended",
     "next",
-    "plugin:prettier/recommended"
+    "next/core-web-vitals"
   ],
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "env": {
     "browser": true,
     "node": true,
