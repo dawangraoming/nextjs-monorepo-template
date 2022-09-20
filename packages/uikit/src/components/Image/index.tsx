@@ -1,10 +1,14 @@
 import React, { createElement, FC, memo } from 'react';
+import { ImageProps } from 'next/image';
 
 const isStorybook = process.env.STORYBOOK === '1';
 
-const HTMLImage = (props: JSX.IntrinsicElements['img']) => {
+const HTMLImage = (props: ImageProps) => {
   // set `alt` value just for fix ide warning
-  return <img {...props} alt={props.alt} />;
+  // set `src` value is for storybook compiler
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return <img src={props.src as string} {...props} alt={props.alt} />;
 };
 
 /**
@@ -23,7 +27,7 @@ const Img: FC<ImageProps> = (props) => {
     // eslint-disable-next-line
     return createElement((require.resolve('next/image') as any).default, {
       ...props,
-      src: typeof props.src === 'string' ? props.src : props.src.src,
+      src: typeof props.src === 'string' ? props.src : props.src,
     });
   } catch {
     return <HTMLImage {...props} />;
