@@ -37,14 +37,10 @@
     "prettier": "^2.7.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "rollup-plugin-image-files": "^1.4.2",
     "typescript": "^4.6.4"
   },
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
-  },
-  "unbuild": {
-    "declaration": true
   }
 }
