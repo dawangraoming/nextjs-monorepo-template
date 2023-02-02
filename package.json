@@ -1,38 +1,38 @@
 {
   "name": "@dawangraoming/nextjs-monorepo-template",
-  "description": "A monorepo includes Turbo, PNPM, Next.js, TypeScript, Jest, ESLint, Storybook.",
   "version": "1.0.0",
-  "author": "dawangraoming",
+  "description": "A monorepo includes Turbo, PNPM, Next.js, TypeScript, Jest, ESLint, Storybook.",
   "license": "MIT",
-  "scripts": {
-    "dev": "turbo run dev --parallel --no-cache",
-    "build": "turbo run build",
-    "test": "turbo run test",
-    "lint": "turbo run lint",
-    "tsc": "turbo run tsc",
-    "storybook": "STORYBOOK=1 start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install"
-  },
+  "author": "dawangraoming",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
+  "scripts": {
+    "dev": "turbo run dev --parallel --no-cache",
+    "build": "turbo run build",
+    "build-storybook": "build-storybook -s public",
+    "lint": "turbo run lint",
+    "storybook": "STORYBOOK=1 start-storybook -p 6006 -s public",
+    "test": "turbo run test",
+    "tsc": "turbo run tsc",
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm"
+  },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.5.12",
-    "@storybook/addon-essentials": "^6.5.12",
-    "@storybook/addon-interactions": "^6.5.12",
-    "@storybook/addon-links": "^6.5.12",
-    "@storybook/builder-webpack5": "^6.5.12",
-    "@storybook/manager-webpack5": "^6.5.12",
-    "@storybook/node-logger": "^6.5.12",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/node-logger": "^6.5.16",
     "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.12",
+    "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
-    "husky": "^8.0.1",
-    "prettier": "^2.6.2",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.3",
     "pretty-quick": "^3.1.3",
-    "turbo": "^1.2.9"
+    "turbo": "^1.7.2"
   }
 }
